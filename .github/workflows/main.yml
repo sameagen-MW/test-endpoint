@@ -33,7 +33,7 @@ jobs:
           command: ver
 
       - name: Create first artifact
-        run: cat "Hello world" > art1.txt
+        run: echo "Hello world" > art1.txt
 
       - uses: actions/upload-artifact@v4
         with:
@@ -41,7 +41,7 @@ jobs:
           path: art1.txt
 
       - name: Create second artifact
-        run: cat "Goodbye" > art2.txt
+        run: echo "Goodbye" > art2.txt
 
       - uses: actions/upload-artifact@v4
         with:
