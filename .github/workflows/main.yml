@@ -31,3 +31,19 @@ jobs:
         uses: matlab-actions/run-command@v2
         with:
           command: ver
+
+      - name: Create first artifact
+        run: cat "Hello world" > art1.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifact1
+          path: art1.txt
+
+      - name: Create second artifact
+        run: cat "Goodbye" > art2.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: artifact2
+          path: art2.txt
